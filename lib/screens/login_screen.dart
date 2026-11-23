@@ -33,7 +33,8 @@ class _LoginScreenState extends State<LoginScreen> {
     );
     if (registered == true && mounted) {
       ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(content: Text('Cadastro concluído. Entre na sua conta.')),
+        const SnackBar(
+            content: Text('Cadastro concluído. Entre na sua conta.')),
       );
     }
   }

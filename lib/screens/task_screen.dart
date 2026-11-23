@@ -191,15 +191,15 @@ class _TaskScreenState extends State<TaskScreen> {
                           icon: Icons.radio_button_unchecked_rounded,
                         ),
                         const SizedBox(height: 12),
-                        for (final task in tasks.where((task) => !task.completed))
+                        for (final task
+                            in tasks.where((task) => !task.completed))
                           TaskTile(
                             task: task,
                             onChanged: (value) => _toggleTask(task, value),
                             onDelete: () => _deleteTask(task),
                           ),
                       ],
-                      if (pendingCount > 0 &&
-                          pendingCount < tasks.length)
+                      if (pendingCount > 0 && pendingCount < tasks.length)
                         const SizedBox(height: 12),
                       if (pendingCount < tasks.length) ...[
                         const _SectionLabel(
@@ -208,7 +208,8 @@ class _TaskScreenState extends State<TaskScreen> {
                           icon: Icons.check_circle_outline_rounded,
                         ),
                         const SizedBox(height: 12),
-                        for (final task in tasks.where((task) => task.completed))
+                        for (final task
+                            in tasks.where((task) => task.completed))
                           TaskTile(
                             task: task,
                             onChanged: (value) => _toggleTask(task, value),
